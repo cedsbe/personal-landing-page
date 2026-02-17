@@ -1079,3 +1079,129 @@ input, select, textarea {
 		#header nav {
 			padding: 0 1em;
 		} }
+
+/* Utility: Visually Hidden (for screen readers and LLMs) */
+
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+/* Key Achievements */
+
+	#achievements {
+		-moz-animation: header 1s 3.25s forwards;
+		-webkit-animation: header 1s 3.25s forwards;
+		-ms-animation: header 1s 3.25s forwards;
+		animation: header 1s 3.25s forwards;
+		opacity: 0;
+		position: relative;
+		text-align: center;
+		margin: 1.5em auto 0 auto;
+		max-width: 42em;
+	}
+
+	#achievements .highlights {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5em 1.5em;
+	}
+
+	#achievements .highlights li {
+		font-size: 0.85em;
+		opacity: 0.65;
+		letter-spacing: 0.05em;
+		position: relative;
+		padding-left: 1em;
+	}
+
+	#achievements .highlights li::before {
+		content: "\2022";
+		position: absolute;
+		left: 0;
+		opacity: 0.5;
+	}
+
+/* Projects */
+
+	#projects {
+		-moz-animation: header 1s 3.75s forwards;
+		-webkit-animation: header 1s 3.75s forwards;
+		-ms-animation: header 1s 3.75s forwards;
+		animation: header 1s 3.75s forwards;
+		opacity: 0;
+		position: relative;
+		text-align: center;
+		margin: 1.25em auto 0 auto;
+	}
+
+	#projects .project-link a {
+		color: #fff;
+		border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+		text-decoration: none;
+		font-size: 0.9em;
+		letter-spacing: 0.05em;
+		opacity: 0.75;
+		-moz-transition: opacity 0.2s ease-in-out;
+		-webkit-transition: opacity 0.2s ease-in-out;
+		-ms-transition: opacity 0.2s ease-in-out;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	#projects .project-link a:hover {
+		opacity: 1;
+	}
+
+	#projects .project-link a .icon {
+		margin-right: 0.35em;
+	}
+
+	#projects .project-tags {
+		display: block;
+		font-size: 0.75em;
+		opacity: 0.45;
+		margin-top: 0.35em;
+		letter-spacing: 0.1em;
+	}
+
+/* Headshot */
+
+	.headshot {
+		-moz-animation: header 1s 1.75s forwards;
+		-webkit-animation: header 1s 1.75s forwards;
+		-ms-animation: header 1s 1.75s forwards;
+		animation: header 1s 1.75s forwards;
+		opacity: 0;
+		border-radius: 50%;
+		border: 3px solid rgba(255, 255, 255, 0.35);
+		width: 120px;
+		height: 120px;
+		object-fit: cover;
+		margin-bottom: 1em;
+		-moz-transition: border-color 0.2s ease-in-out;
+		-webkit-transition: border-color 0.2s ease-in-out;
+		-ms-transition: border-color 0.2s ease-in-out;
+		transition: border-color 0.2s ease-in-out;
+	}
+
+	.headshot:hover {
+		border-color: rgba(255, 255, 255, 0.75);
+	}
+
+	@media screen and (max-width: 736px) {
+		.headshot {
+			width: 90px;
+			height: 90px;
+		}
+	}
